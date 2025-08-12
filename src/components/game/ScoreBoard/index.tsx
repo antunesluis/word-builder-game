@@ -7,7 +7,7 @@ interface ScoreBoardProps {
   gameState: GameState;
 }
 
-export function ScoreBoard({ gameState }: ScoreBoardProps) {
+export default function ScoreBoard({ gameState }: ScoreBoardProps) {
   return (
     <div className='bg-white rounded-2xl shadow-lg p-6'>
       <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4'>

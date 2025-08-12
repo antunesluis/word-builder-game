@@ -5,7 +5,7 @@ import { useWordBuilder } from '@/hooks/useWordBuilder';
 import SyllableBank from './SyllableBank';
 import ConstructionZone from './ConstructionZone';
 import FeedbackModal from './FeedbackModal';
-import { ScoreBoard } from './ScoreBoard';
+import ScoreBoard from './ScoreBoard';
 
 const WordBuilder: React.FC = () => {
   const {

@@ -2,10 +2,10 @@ import React from 'react';
 import { Syllable, Word } from '@/types/game';
 import Button from '@/components/ui/Button';
 import { WordHint } from './WordHint';
-import { SyllableItem } from './SyllableItem';
 import { DropArea } from './DropArea';
 import { EmptyDropArea } from './EmptyDropArea';
 import { ConstructedWordPreview } from './ConstructedWordPreview';
+import { SyllableItem } from '@/components/ui/SyllableItem';
 
 interface ConstructionZoneProps {
   currentWord: Word;
@@ -68,10 +68,12 @@ const ConstructionZone: React.FC<ConstructionZoneProps> = ({
               {sortedSyllables.map((syllable, index) => (
                 <div key={syllable.id} className='flex items-center'>
                   <SyllableItem
+                    key={syllable.id}
                     syllable={syllable}
                     isDragged={draggedItem === syllable.id}
                     onDragStart={handleDragStart}
                     onDragEnd={onDragEnd}
+                    variant='construction'
                   />
                   {index < sortedSyllables.length - 1 && (
                     <span className='text-gray-400 mx-1 text-lg'>-</span>
