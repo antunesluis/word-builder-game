@@ -4,8 +4,8 @@ import React, { useEffect } from 'react';
 import { useWordBuilder } from '@/hooks/useWordBuilder';
 import SyllableBank from './SyllableBank';
 import ConstructionZone from './ConstructionZone';
-import FeedbackModal from './FeedbackModal';
 import ScoreBoard from './ScoreBoard';
+import { FeedbackModal } from './FeedbackModal';
 
 const WordBuilder: React.FC = () => {
   const {
