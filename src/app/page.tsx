@@ -1,4 +1,4 @@
-import WordBuilder from '@/components/WordBuilder';
+import WordBuilder from '@/components/game/WordBuilder';
 
 export default function HomePage() {
   return <WordBuilder />;

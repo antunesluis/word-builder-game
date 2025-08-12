@@ -23,8 +23,8 @@ export interface GameState {
   level: number;
   attempts: number;
   totalWords: number;
-  startTime?: number; // Nova: para tracking de tempo
-  bestScore?: number; // Nova: melhor pontuação
+  startTime?: number;
+  bestScore?: number;
 }
 
 // Enums e tipos de união

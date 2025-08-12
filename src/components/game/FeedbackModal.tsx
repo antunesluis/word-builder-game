@@ -1,6 +1,6 @@
 import React from 'react';
 import { GameStatus } from '@/types/game';
-import Button from '@/components/Button';
+import Button from '@/components/ui/Button';
 
 interface FeedbackModalProps {
   status: GameStatus;

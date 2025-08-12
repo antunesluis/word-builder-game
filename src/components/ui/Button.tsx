@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary: `
-      bg-blue-500 hover:bg-blue-600 text-white 
+      bg-blue-500 hover:bg-blue-600 text-white
       focus:ring-blue-500 shadow-lg hover:shadow-xl
       transform hover:scale-105 active:scale-95
     `,
@@ -40,13 +40,13 @@ const Button: React.FC<ButtonProps> = ({
       bg-red-500 hover:bg-red-600 text-white
       focus:ring-red-500 shadow-lg hover:shadow-xl
       transform hover:scale-105 active:scale-95
-    `
+    `,
   };
 
   const sizeClasses = {
     sm: 'px-3 py-2 text-sm',
     md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
+    lg: 'px-8 py-4 text-lg',
   };
 
   const combinedClassName = `
@@ -54,14 +54,12 @@ const Button: React.FC<ButtonProps> = ({
     ${variantClasses[variant]}
     ${sizeClasses[size]}
     ${className}
-  `.replace(/\s+/g, ' ').trim();
+  `
+    .replace(/\s+/g, ' ')
+    .trim();
 
   return (
-    <button
-      className={combinedClassName}
-      disabled={disabled}
-      {...props}
-    >
+    <button className={combinedClassName} disabled={disabled} {...props}>
       {children}
     </button>
   );

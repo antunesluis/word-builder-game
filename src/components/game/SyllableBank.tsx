@@ -16,7 +16,7 @@ const SyllableBank: React.FC<SyllableBankProps> = ({
   onDragStart,
   onDragEnd,
   onDrop,
-  onDragOver
+  onDragOver,
 }) => {
   const handleDragStart = (e: React.DragEvent, syllableId: string) => {
     e.dataTransfer.effectAllowed = 'move';
@@ -25,9 +25,9 @@ const SyllableBank: React.FC<SyllableBankProps> = ({
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6">
-      <h3 className="text-lg font-semibold text-gray-700 mb-4 flex items-center gap-2">
-        <span className="text-blue-500">📚</span>
+    <div className='bg-white rounded-2xl shadow-lg p-6'>
+      <h3 className='text-lg font-semibold text-gray-700 mb-4 flex items-center gap-2'>
+        <span className='text-blue-500'>📚</span>
         Sílabas disponíveis
       </h3>
 
@@ -40,26 +40,27 @@ const SyllableBank: React.FC<SyllableBankProps> = ({
         onDrop={onDrop}
       >
         {syllables.length === 0 ? (
-          <div className="flex items-center justify-center w-full text-gray-400 text-lg">
-            <span className="text-center">
-              <div className="text-3xl mb-2">✨</div>
+          <div className='flex items-center justify-center w-full text-gray-400 text-lg'>
+            <span className='text-center'>
+              <div className='text-3xl mb-2'>✨</div>
               <div>Todas as sílabas foram usadas!</div>
             </span>
           </div>
         ) : (
-          syllables.map((syllable) => (
+          syllables.map(syllable => (
             <div
               key={syllable.id}
               draggable
-              onDragStart={(e) => handleDragStart(e, syllable.id)}
+              onDragStart={e => handleDragStart(e, syllable.id)}
               onDragEnd={onDragEnd}
               className={`
-                select-none cursor-move px-4 py-3 rounded-lg text-xl font-bold 
+                select-none cursor-move px-4 py-3 rounded-lg text-xl font-bold
                 border-2 shadow-md transition-all duration-200
                 transform hover:scale-105 active:scale-95
-                ${draggedItem === syllable.id
-                  ? 'bg-blue-300 border-blue-500 text-blue-900 opacity-60 scale-105'
-                  : 'bg-blue-200 border-blue-400 text-blue-800 hover:bg-blue-300 hover:shadow-lg'
+                ${
+                  draggedItem === syllable.id
+                    ? 'bg-blue-300 border-blue-500 text-blue-900 opacity-60 scale-105'
+                    : 'bg-blue-200 border-blue-400 text-blue-800 hover:bg-blue-300 hover:shadow-lg'
                 }
               `}
             >
@@ -70,7 +71,7 @@ const SyllableBank: React.FC<SyllableBankProps> = ({
       </div>
 
       {syllables.length > 0 && (
-        <p className="text-sm text-gray-500 mt-3 text-center">
+        <p className='text-sm text-gray-500 mt-3 text-center'>
           💡 Arraste as sílabas para formar a palavra
         </p>
       )}
