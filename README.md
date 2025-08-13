@@ -4,6 +4,8 @@ Word Builder is an interactive educational game designed to help children learn
 word formation through syllables. Players drag and drop syllables to construct
 words based on visual hints and emoji clues.
 
+![Home screenshot](assets/screenshots/home.png)
+
 ## Features
 
 - **Syllable-Based** Learning: Build words by combining syllables
