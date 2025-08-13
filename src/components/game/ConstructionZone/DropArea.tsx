@@ -5,7 +5,7 @@ interface DropAreaProps {
   isCorrect: boolean;
   canCheck: boolean;
   onDragOver: (e: React.DragEvent) => void;
-  onDrop: () => void;
+  onDrop: (e: React.DragEvent) => void;
   children: ReactNode;
 }
 

@@ -1,4 +1,4 @@
-import { Syllable, Word } from '@/types/game';
+import { GameState, Syllable, Word } from '@/types/game';
 
 /**
  * Embaralha as sílabas de uma palavra
@@ -107,7 +107,7 @@ export const getEncouragementMessage = (
 /**
  * Sistema de conquistas simples
  */
-export const checkAchievements = (gameState: any) => {
+export const checkAchievements = (gameState: GameState) => {
   const achievements = [];
 
   if (gameState.totalWords === 1) {

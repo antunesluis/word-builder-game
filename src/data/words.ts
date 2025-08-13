@@ -7,49 +7,49 @@ export const WORDS_BANK: Word[] = [
     syllables: ['CA', 'SA'],
     difficulty: 'facil',
     hint: 'Lugar onde moramos',
-    emoji: '🏠'
+    emoji: '🏠',
   },
   {
     id: '2',
     syllables: ['GA', 'TO'],
     difficulty: 'facil',
     hint: 'Animal de estimação que faz miau',
-    emoji: '🐱'
+    emoji: '🐱',
   },
   {
     id: '3',
     syllables: ['PA', 'TO'], // CORRIGIDO: PA primeiro, TO segundo = PATO
     difficulty: 'facil',
     hint: 'Animal que nada no lago',
-    emoji: '🦆'
+    emoji: '🦆',
   },
   {
     id: '4',
     syllables: ['BO', 'LA'],
     difficulty: 'facil',
     hint: 'Usada para jogar futebol',
-    emoji: '⚽'
+    emoji: '⚽',
   },
   {
     id: '5',
     syllables: ['SO', 'PA'],
     difficulty: 'facil',
     hint: 'Comida líquida e quente',
-    emoji: '🍲'
+    emoji: '🍲',
   },
   {
     id: '6',
     syllables: ['LUA'],
     difficulty: 'facil',
     hint: 'Brilha no céu à noite',
-    emoji: '🌙'
+    emoji: '🌙',
   },
   {
     id: '7',
     syllables: ['SOL'],
     difficulty: 'facil',
     hint: 'Brilha durante o dia',
-    emoji: '☀️'
+    emoji: '☀️',
   },
 
   // Nível Médio - 3 sílabas
@@ -58,35 +58,35 @@ export const WORDS_BANK: Word[] = [
     syllables: ['CA', 'VA', 'LO'],
     difficulty: 'medio',
     hint: 'Animal que corre e galopa',
-    emoji: '🐴'
+    emoji: '🐴',
   },
   {
     id: '9',
     syllables: ['MA', 'CA', 'CO'],
     difficulty: 'medio',
     hint: 'Animal que pula nas árvores',
-    emoji: '🐵'
+    emoji: '🐵',
   },
   {
     id: '10',
     syllables: ['GI', 'RAS', 'SOL'],
     difficulty: 'medio',
     hint: 'Flor amarela grande',
-    emoji: '🌻'
+    emoji: '🌻',
   },
   {
     id: '11',
     syllables: ['PÁS', 'SA', 'RO'],
     difficulty: 'medio',
     hint: 'Ave que voa no céu',
-    emoji: '🐦'
+    emoji: '🐦',
   },
   {
     id: '12',
     syllables: ['FOR', 'MI', 'GA'],
     difficulty: 'medio',
     hint: 'Inseto pequeno e trabalhador',
-    emoji: '🐜'
+    emoji: '🐜',
   },
 
   // Nível Difícil - 4+ sílabas
@@ -95,62 +95,66 @@ export const WORDS_BANK: Word[] = [
     syllables: ['E', 'LE', 'FAN', 'TE'],
     difficulty: 'dificil',
     hint: 'Animal grande com tromba',
-    emoji: '🐘'
+    emoji: '🐘',
   },
   {
     id: '14',
     syllables: ['HI', 'PO', 'PÓ', 'TA', 'MO'],
     difficulty: 'dificil',
     hint: 'Animal grande que vive na água',
-    emoji: '🦛'
+    emoji: '🦛',
   },
   {
     id: '15',
     syllables: ['DI', 'NOS', 'SAU', 'RO'],
     difficulty: 'dificil',
     hint: 'Animal pré-histórico gigante',
-    emoji: '🦕'
+    emoji: '🦕',
   },
   {
     id: '16',
     syllables: ['BOR', 'BO', 'LE', 'TA'],
     difficulty: 'dificil',
     hint: 'Inseto colorido que voa de flor em flor',
-    emoji: '🦋'
+    emoji: '🦋',
   },
   {
     id: '17',
     syllables: ['ES', 'CO', 'VA', 'DEN', 'TES'],
     difficulty: 'dificil',
     hint: 'Usada para limpar os dentes',
-    emoji: '🪥'
-  }
+    emoji: '🪥',
+  },
 ];
 
-export const getDifficultyConfig = (difficulty: 'facil' | 'medio' | 'dificil') => {
+export const getDifficultyConfig = (
+  difficulty: 'facil' | 'medio' | 'dificil',
+) => {
   switch (difficulty) {
     case 'facil':
       return {
         points: 10,
         color: 'success',
-        label: 'Fácil'
+        label: 'Fácil',
       };
     case 'medio':
       return {
         points: 20,
         color: 'warning',
-        label: 'Médio'
+        label: 'Médio',
       };
     case 'dificil':
       return {
         points: 30,
         color: 'error',
-        label: 'Difícil'
+        label: 'Difícil',
       };
   }
 };
 
-export const getWordsByDifficulty = (difficulty: 'facil' | 'medio' | 'dificil') => {
+export const getWordsByDifficulty = (
+  difficulty: 'facil' | 'medio' | 'dificil',
+) => {
   return WORDS_BANK.filter(word => word.difficulty === difficulty);
 };
 
@@ -165,14 +169,8 @@ export const getRandomWord = (level: number): Word => {
     availableWords = getWordsByDifficulty('dificil');
   }
 
-  const selectedWord = availableWords[Math.floor(Math.random() * availableWords.length)] || WORDS_BANK[0];
-
-  console.log('=== PALAVRA SELECIONADA ===');
-  console.log('Nível:', level);
-  console.log('Palavra:', selectedWord);
-  console.log('Sílabas na ordem correta:', selectedWord.syllables);
-  console.log('Palavra formada:', selectedWord.syllables.join(''));
-  console.log('==========================');
-
+  const selectedWord =
+    availableWords[Math.floor(Math.random() * availableWords.length)] ||
+    WORDS_BANK[0];
   return selectedWord;
 };

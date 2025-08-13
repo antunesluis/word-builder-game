@@ -13,7 +13,7 @@ interface ConstructionZoneProps {
   draggedItem: string | null;
   onDragStart: (syllableId: string) => void;
   onDragEnd: () => void;
-  onDrop: () => void;
+  onDrop: (e: React.DragEvent) => void;
   onDragOver: (e: React.DragEvent) => void;
   onCheckWord: () => void;
   canCheck: boolean;

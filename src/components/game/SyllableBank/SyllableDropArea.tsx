@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react';
 interface SyllableDropAreaProps {
   isEmpty: boolean;
   onDragOver: (e: React.DragEvent) => void;
-  onDrop: () => void;
+  onDrop: (e: React.DragEvent) => void;
   children: ReactNode;
 }
 
