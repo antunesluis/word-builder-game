@@ -23,7 +23,7 @@ export const MODAL_CONFIGS: Record<GameStatus, ModalConfig | null> = {
     emoji: '😅',
     title: 'TENTE NOVAMENTE!',
     bgGradient: 'from-red-400 to-red-600',
-    animation: 'animate-pulse',
+    animation: 'animate-bounce',
     showHint: true,
   },
   completed: {

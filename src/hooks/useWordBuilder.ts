@@ -9,6 +9,8 @@ import {
   calculateScore,
 } from '@/lib/gameLogic';
 
+const ERROR_MODAL_DURATION = 3000;
+
 export const useWordBuilder = () => {
   const [gameState, setGameState] = useState<GameState>({
     currentWord: getRandomWord(1),
@@ -85,40 +87,44 @@ export const useWordBuilder = () => {
 
       if (isCorrect) {
         const points = calculateScore(prev.currentWord.difficulty, newAttempts);
+        const newLevel = prev.level + 1; // CORREÇÃO: Calcular o novo nível aqui
+        const newScore = prev.score + points;
+        const newTotalWords = prev.totalWords + 1;
 
         setGameStatus('success');
 
         // Auto avançar após 2 segundos
         setTimeout(() => {
-          if (prev.level >= 15) {
+          if (newLevel > 30) {
             setGameStatus('completed');
           } else {
-            setGameState(current => {
-              const word = getRandomWord(current.level + 1);
-              const shuffledSyllables = shuffleSyllables(word.syllables);
-
-              return {
-                ...current,
-                currentWord: word,
-                availableSyllables: shuffledSyllables,
-                constructedSyllables: [],
-                attempts: 0,
-                level: current.level + 1,
-              };
-            });
+            // CORREÇÃO: Usar os valores já calculados
+            const nextWord = getRandomWord(newLevel);
+            setGameState(current => ({
+              ...current,
+              currentWord: nextWord,
+              availableSyllables: shuffleSyllables(nextWord.syllables),
+              constructedSyllables: [],
+              attempts: 0,
+              level: newLevel,
+              score: newScore,
+              totalWords: newTotalWords,
+            }));
             setGameStatus('playing');
           }
         }, 2000);
 
+        // CORREÇÃO: Retornar o estado atualizado imediatamente
         return {
           ...prev,
-          score: prev.score + points,
-          totalWords: prev.totalWords + 1,
+          score: newScore,
+          totalWords: newTotalWords,
           attempts: newAttempts,
+          level: newLevel, // IMPORTANTE: Atualizar o nível aqui também
         };
       } else {
         setGameStatus('error');
-        setTimeout(() => setGameStatus('playing'), 1500);
+        setTimeout(() => setGameStatus('playing'), ERROR_MODAL_DURATION);
 
         return {
           ...prev,

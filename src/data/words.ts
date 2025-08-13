@@ -161,9 +161,9 @@ export const getWordsByDifficulty = (
 export const getRandomWord = (level: number): Word => {
   let availableWords: Word[];
 
-  if (level <= 3) {
+  if (level <= 10) {
     availableWords = getWordsByDifficulty('facil');
-  } else if (level <= 7) {
+  } else if (level <= 20) {
     availableWords = getWordsByDifficulty('medio');
   } else {
     availableWords = getWordsByDifficulty('dificil');
