@@ -21,19 +21,19 @@ export default function Footer() {
         {/* Links úteis */}
         <div className='flex flex-wrap justify-center gap-6 text-sm mb-6'>
           <Link
-            href='/sobre'
+            href='/'
             className='text-gray-500 hover:text-blue-600 transition-colors'
           >
             📖 Sobre o Projeto
           </Link>
           <Link
-            href='/dicas'
+            href='/'
             className='text-gray-500 hover:text-blue-600 transition-colors'
           >
             💡 Dicas para Pais
           </Link>
           <Link
-            href='/contato'
+            href='/'
             className='text-gray-500 hover:text-blue-600 transition-colors'
           >
             📧 Contato
