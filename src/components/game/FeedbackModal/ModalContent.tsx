@@ -21,11 +21,11 @@ export const ModalContent = ({
   onResetGame,
 }: ModalContentProps) => (
   <div className='p-6 text-center'>
-    <p className='text-lg text-gray-600 whitespace-pre-line'>{message}</p>
+    <p className='text-xl text-gray-600 whitespace-pre-line'>{message}</p>
 
     {showStats && level && score && (
       <div className='mt-4 p-3 bg-green-50 rounded-lg border border-green-200'>
-        <div className='flex justify-around text-sm'>
+        <div className='flex justify-around text-md'>
           <div>
             <div className='font-bold text-green-600'>Nível</div>
             <div className='text-gray-600'>{level}</div>
@@ -40,7 +40,7 @@ export const ModalContent = ({
 
     {showHint && (
       <div className='mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200'>
-        <p className='text-sm text-blue-600 font-medium'>
+        <p className='text-md text-blue-600 font-medium'>
           💡 Dica: Observe bem a ordem das sílabas!
         </p>
       </div>

@@ -19,7 +19,7 @@ export function DifficultyBadge({ level }: DifficultyBadgeProps) {
 
   return (
     <div
-      className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(level)}`}
+      className={`px-4 py-1 rounded-full text-sm font-medium ${getDifficultyColor(level)}`}
     >
       {getDifficultyLabel(level)}
     </div>

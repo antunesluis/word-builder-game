@@ -30,7 +30,7 @@ export default function SyllableBank({
 
   return (
     <div className='bg-white rounded-2xl shadow-lg p-6'>
-      <h3 className='text-lg font-semibold text-gray-700 mb-4 flex items-center gap-2'>
+      <h3 className='text-xl font-semibold text-gray-700 mb-4 flex items-center gap-2'>
         <span className='text-blue-500'>📚</span>
         Sílabas disponíveis
       </h3>

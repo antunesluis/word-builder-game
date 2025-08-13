@@ -8,7 +8,7 @@ export function WordHint({ currentWord }: WordHintProps) {
   return (
     <div className='bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl shadow-lg p-6 text-center border border-purple-200'>
       <h2 className='text-xl font-semibold text-gray-700 mb-3 flex items-center justify-center gap-2'>
-        <span className='text-2xl'>🎯</span>
+        <span className='text-2xl font-bold'>🎯</span>
         Forme a palavra:
       </h2>
       <div className='flex items-center justify-center gap-3'>

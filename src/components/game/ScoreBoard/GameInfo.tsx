@@ -7,7 +7,7 @@ interface GameInfoProps {
 
 export function GameInfo({ level, attempts }: GameInfoProps) {
   return (
-    <div className='flex items-center gap-4 text-lg text-gray-600'>
+    <div className='flex items-center gap-4 text-xl text-gray-600'>
       <div className='flex items-center gap-2'>
         <span className='text-blue-500'>📈</span>
         <p>Nível {level}</p>

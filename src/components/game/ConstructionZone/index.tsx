@@ -49,7 +49,7 @@ const ConstructionZone: React.FC<ConstructionZoneProps> = ({
       <WordHint currentWord={currentWord} />
 
       <div className='bg-white rounded-2xl shadow-lg p-6'>
-        <h3 className='text-lg font-semibold text-gray-700 mb-4 flex items-center gap-2'>
+        <h3 className='text-xl font-semibold text-gray-700 mb-4 flex items-center gap-2'>
           <span className='text-green-500'>🔨</span>
           Monte a palavra aqui
         </h3>
@@ -107,7 +107,7 @@ const ConstructionZone: React.FC<ConstructionZoneProps> = ({
         )}
 
         {constructedSyllables.length > 0 && !canCheck && (
-          <p className='text-sm text-gray-500 mt-3 text-center'>
+          <p className='text-md text-gray-500 mt-3 text-center'>
             💡 Continue arrastando sílabas para completar a palavra (
             {constructedSyllables.length}/{currentWord.syllables.length})
           </p>
