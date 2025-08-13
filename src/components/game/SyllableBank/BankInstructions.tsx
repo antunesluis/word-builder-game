@@ -7,7 +7,7 @@ export function BankInstructions({ show }: BankInstructionsProps) {
 
   return (
     <p className='text-md text-gray-500 mt-3 text-center'>
-      💡 Arraste as sílabas para formar a palavra
+      💡 ARRASTE AS SÍLABAS PARA FORMAR A PALAVRA
     </p>
   );
 }

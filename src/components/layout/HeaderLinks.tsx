@@ -7,13 +7,13 @@ export function HeaderLinks() {
         href='/'
         className='text-gray-600 hover:text-blue-600 transition-colors font-medium'
       >
-        🏠 Jogar
+        🏠 JOGAR
       </Link>
       <Link
         href='/help'
         className='text-gray-600 hover:text-blue-600 transition-colors font-medium'
       >
-        ❓ Como Jogar
+        ❓ COMO JOGAR
       </Link>
     </nav>
   );

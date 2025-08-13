@@ -51,7 +51,7 @@ const ConstructionZone: React.FC<ConstructionZoneProps> = ({
       <div className='bg-white rounded-2xl shadow-lg p-6'>
         <h3 className='text-xl font-semibold text-gray-700 mb-4 flex items-center gap-2'>
           <span className='text-green-500'>🔨</span>
-          Monte a palavra aqui
+          MONTE A PALAVRA AQUI
         </h3>
 
         <DropArea
@@ -101,14 +101,14 @@ const ConstructionZone: React.FC<ConstructionZoneProps> = ({
               variant={formedWord === targetWord ? 'success' : 'primary'}
             >
               <span className='mr-2'>✨</span>
-              Verificar Palavra
+              VERIFICAR PALAVRA
             </Button>
           </div>
         )}
 
         {constructedSyllables.length > 0 && !canCheck && (
           <p className='text-md text-gray-500 mt-3 text-center'>
-            💡 Continue arrastando sílabas para completar a palavra (
+            💡 CONTINUE ARRASTANDO SÍLABAS PARA COMPLETAR A PALAVRA (
             {constructedSyllables.length}/{currentWord.syllables.length})
           </p>
         )}

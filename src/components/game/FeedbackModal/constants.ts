@@ -14,21 +14,21 @@ export const MODAL_CONFIGS: Record<GameStatus, ModalConfig | null> = {
   playing: null,
   success: {
     emoji: '🎉',
-    title: 'Parabéns!',
+    title: 'PARABÉNS!',
     bgGradient: 'from-green-400 to-green-600',
     animation: 'animate-bounce',
     showStats: true,
   },
   error: {
     emoji: '😅',
-    title: 'Tente novamente!',
+    title: 'TENTE NOVAMENTE!',
     bgGradient: 'from-red-400 to-red-600',
     animation: 'animate-pulse',
     showHint: true,
   },
   completed: {
     emoji: '🏆',
-    title: 'Fantástico!',
+    title: 'FANTÁSTICO!',
     bgGradient: 'from-purple-400 to-pink-600',
     animation: 'animate-bounce',
     showButton: true,
@@ -39,11 +39,11 @@ export const MODAL_CONFIGS: Record<GameStatus, ModalConfig | null> = {
 export const getModalMessage = (status: GameStatus, score?: number): string => {
   switch (status) {
     case 'success':
-      return 'Palavra correta!';
+      return 'PALAVRA CORRETA!';
     case 'error':
-      return 'A palavra não está correta.';
+      return 'A PALAVRA NÃO ESTÁ CORRETA.';
     case 'completed':
-      return `Você completou todos os níveis!\nPontuação final: ${score} pontos`;
+      return `VOCÊ COMPLETOU TODOS OS NÍVEIS!\nPONTUAÇÃO FINAL: ${score} PONTOS`;
     default:
       return '';
   }

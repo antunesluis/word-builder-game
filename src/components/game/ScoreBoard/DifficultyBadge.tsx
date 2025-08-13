@@ -12,9 +12,9 @@ export function DifficultyBadge({ level }: DifficultyBadgeProps) {
   };
 
   const getDifficultyLabel = (level: number) => {
-    if (level <= 3) return 'Fácil';
-    if (level <= 7) return 'Médio';
-    return 'Difícil';
+    if (level <= 3) return 'FÁCIL';
+    if (level <= 7) return 'MÉDIO';
+    return 'DIFÍCIL';
   };
 
   return (

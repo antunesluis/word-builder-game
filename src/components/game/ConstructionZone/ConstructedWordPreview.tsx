@@ -21,7 +21,7 @@ export function ConstructedWordPreview({
           }
         `}
       >
-        <span className='text-gray-600 text-sm'>Palavra formada: </span>
+        <span className='text-gray-600 text-sm'>PALAVRA FORMADA: </span>
         <span className='font-bold text-lg'>{word}</span>
         {showCheckmark && <span className='ml-2 text-green-600'>✓</span>}
       </div>

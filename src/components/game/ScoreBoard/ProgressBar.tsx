@@ -4,7 +4,7 @@ export function ProgressBar({ level }: ProgressBarProps) {
   return (
     <div className='mt-4'>
       <div className='flex justify-between items-center text-lg text-gray-500 mb-1'>
-        <span>Progresso do Nível</span>
+        <span>PROGRESSO</span>
         <span>{level}/15</span>
       </div>
       <div className='w-full bg-gray-200 rounded-full h-2'>

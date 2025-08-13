@@ -8,10 +8,10 @@ interface GameStatsProps {
 export function GameStats({ score, totalWords }: GameStatsProps) {
   return (
     <div className='flex flex-col sm:flex-row gap-4'>
-      <StatsCard title='Pontos' score={score} variant='blue' />
+      <StatsCard title='PONTOS' score={score} variant='blue' />
 
       {totalWords > 0 && (
-        <StatsCard title='Palavras' score={totalWords} variant='green' />
+        <StatsCard title='PALAVRAS' score={totalWords} variant='green' />
       )}
     </div>
   );

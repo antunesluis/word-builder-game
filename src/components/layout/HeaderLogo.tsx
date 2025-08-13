@@ -7,7 +7,7 @@ export function HeaderLogo() {
       <div>
         <h1 className='text-3xl/normal font-extrabold text-gray-800'>
           <Link href='/' className='hover:text-blue-600 transition-colors'>
-            Construtor de Palavras
+            CONSTRUTOR DE PALAVRAS
           </Link>
         </h1>
       </div>
