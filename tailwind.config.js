@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-body)'],
+        heading: ['var(--font-heading)'],
+      },
       animation: {
         'bounce-slow': 'bounce 1s infinite',
         'pulse-slow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -35,9 +39,9 @@ module.exports = {
           100: '#fee2e2',
           500: '#ef4444',
           600: '#dc2626',
-        }
-      }
+        },
+      },
     },
   },
   plugins: [],
-}
+};

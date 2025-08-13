@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Container } from '@/components/layout/Container';
 import { Header } from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { Comic_Neue, Fredoka } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const comicNeue = Comic_Neue({
   subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-body',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const fredoka = Fredoka({
   subsets: ['latin'],
+  variable: '--font-heading',
 });
 
 export const metadata: Metadata = {
@@ -27,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${comicNeue.variable} ${fredoka.variable} antialiased`}>
         <Header />
         <Container>{children}</Container>
         <Footer />
